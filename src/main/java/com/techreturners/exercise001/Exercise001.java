@@ -20,14 +20,19 @@ public class Exercise001 {
 
     public String reverse(String sentence) {
         StringBuilder reversed = new StringBuilder();
-        for (Integer i = sentence.length() - 1; i >= 0; i--) {
+        for (int i = sentence.length() - 1; i >= 0; i--) {
             reversed.append(sentence.charAt(i));
         }
         return reversed.toString();
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
-        return 0;
+        int count = 0;
+        for (User i : users) {
+            if (i.getType().equals("Linux")) {
+                count++;
+            };
+        }
+        return count;
     }
 }
