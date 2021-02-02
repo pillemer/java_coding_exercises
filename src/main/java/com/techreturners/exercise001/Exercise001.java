@@ -19,8 +19,11 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        // Add your code here
-        return "";
+        StringBuilder reversed = new StringBuilder();
+        for (Integer i = sentence.length() - 1; i >= 0; i--) {
+            reversed.append(sentence.charAt(i));
+        }
+        return reversed.toString();
     }
 
     public int countLinuxUsers(List<User> users) {
